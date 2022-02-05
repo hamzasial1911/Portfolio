@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 import django_heroku
-from pickle import FALSE
-
+from decouple import config
+from pickle import FALSE, TRUE
 import django
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+3ndb=wp&s#fw&&lncdanfeebu948q$-zre**9or7e9b!9x!=k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = TRUE
 
-ALLOWED_HOSTS = ['127.0.0.1','hamza1911.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
